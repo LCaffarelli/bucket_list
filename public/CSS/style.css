@@ -1,0 +1,14 @@
+body{
+    background-color: linen ;
+    font-family: 'Roboto Light', sans-serif;
+}
+
+#titre{
+    text-align: center;
+    align-items: center;
+}
+#logo{
+    width: 100px;
+
+}
+
