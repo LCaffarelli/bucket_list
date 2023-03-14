@@ -9,27 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="icon" href="{{ asset('img/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
     <title id="title">{% block title %}Bucket List{% endblock %}</title>
 </head>
 <body>
-<header>
-    {% include "inc/nav.html.twig" %}
-    <h1 id="titre">
-        <a href="{{ path('home') }}"><img id="logo" src="{{ asset('img/logo.svg') }}"  alt="logo d'un sceau"></a>Ma Bucket List
-    </h1>
-</header>
+<div class="container">
+    <header>
+        <h1 id="titre">
+            <a class="site-title" href="{{ path('main_home') }}"><img id="logo" src="{{ asset('img/logo.svg') }}" alt="logo d'un sceau"></a>Ma Bucket List
+        </h1>
+        {% include "inc/nav.html.twig" %}
+    </header>
 
-{% block stylesheets %}
-    {{ encore_entry_link_tags('app') }}
-{% endblock %}
+</div>
+<main>
+  {% block body %}{% endblock %}
+</main>
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
-{% block body %}{% endblock %}
-<footer>
-    @Bucket-List {{ "now"|date('Y') }}
-</footer>
+{% include "inc/footer.html.twig" %}
 </body>
 </html>
