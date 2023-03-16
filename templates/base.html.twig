@@ -16,14 +16,15 @@
 <div class="container">
     <header>
         <h1 id="titre">
-            <a class="site-title" href="{{ path('main_home') }}"><img id="logo" src="{{ asset('img/logo.svg') }}" alt="logo d'un sceau"></a>Ma Bucket List
+            <a class="site-title" href="{{ path('main_home') }}"><img id="logo" src="{{ asset('img/logo.svg') }}"
+                                                                      alt="logo d'un sceau"></a>Ma Bucket List
         </h1>
         {% include "inc/nav.html.twig" %}
     </header>
 
 </div>
 <main>
-  {% block body %}{% endblock %}
+    {% block body %}{% endblock %}
 </main>
 
 {% include "inc/footer.html.twig" %}

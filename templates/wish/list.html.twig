@@ -1,11 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<section>
-    <ul>
-        <li>Sauter en parachute</li>
-        <li>Faire le tour du monde</li>
-    </ul>
-</section>
+    <section>
+        {% for wish in wishes %}
+            <ul>
+                <li><a href="{{ path('wish_details',{'id':wish.id}) }}">{{ wish.title }} de {{ wish.author }}</a></li>
+            </ul>
+
+
+        {% endfor %}
+    </section>
 {% endblock %}
 
 {% block title %}
