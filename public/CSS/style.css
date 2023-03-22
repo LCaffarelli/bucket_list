@@ -76,6 +76,12 @@ footer {
     height:50px;   /* Hauteur du pied de page */
 
 }
+/*
+Form
+*/
+#form{
+    display: flex;
+    justify-content: space-between;
 
-
+}
 
