@@ -3,7 +3,7 @@
     <section>
         {% for wish in wishes %}
             <ul>
-                <li><a href="{{ path('wish_details',{'id':wish.id}) }}">{{ wish.title }} de {{ wish.author }}</a></li>
+                <li><a href="{{ path('wish_details',{'id':wish.id}) }}">{{ wish.title }} de {{ wish.author }} ({{ wish.category.name }})</a></li>
             </ul>
 
 
