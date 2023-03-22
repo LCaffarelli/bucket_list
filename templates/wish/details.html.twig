@@ -9,9 +9,11 @@
 
     <p>De {{ wish.author }} le {{ wish.dateCreated |date('d/m/Y') }}</p>
 
-
+    <a href="{{ path ('wish_list') }}"><button>Retour</button></a>
+    <button>Supprimer</button>
     {% endblock %}
 
     {% block title %}
     {{ parent() }} | {{ wish.title }}
+    
 {% endblock %}
