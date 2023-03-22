@@ -1,15 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 <div>
-    <h2>{{ wish.title }}</h2> de {{ wish.author }} le {{ wish.dateCreated |date('d/m/Y') }}
+    <h1>{{ wish.title }}</h1>
+    Catégorie: {{ wish.category.name }}.
+
+    <h2>Description : </h2>
     <p>{{ wish.description }}</p>
-    <div>Catégorie :
 
+    <p>De {{ wish.author }} le {{ wish.dateCreated |date('d/m/Y') }}</p>
 
-        {{ wish.category.name }}
-
-
-    </div>
 
     {% endblock %}
 
